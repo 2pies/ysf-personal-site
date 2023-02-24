@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  main {
+    @apply max-w-full flex-1 overflow-auto px-4;
+  }
+
+  .container {
+    @apply w-main-w max-w-full pb-8;
+  }
+
+  h1 {
+    @apply mb-8 text-3xl font-bold;
+  }
+
+  .rich-md h2 {
+    @apply mb-2 mt-4 text-2xl font-bold;
+  }
+
+  .rich-md p {
+    @apply mb-2;
+  }
+
+  .rich-md img {
+    @apply mb-2;
+  }
+}
