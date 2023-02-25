@@ -20,6 +20,7 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
           list={props.performanceList.map((v) => ({
             ...v,
             title: `${v.title} (${v.year})`,
+            slug: `/performance/${v.slug}`,
           }))}
         />
       </main>

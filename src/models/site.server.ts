@@ -11,7 +11,7 @@ const translations = {
   menu_about: 'About',
   menu_contact: 'Contact',
 
-  copyRight: 'Copyright © Siu Fong Yeung 2022. All Rights Reserved',
+  copyRight: 'Copyright © Siu Fong Yeung {year}. All Rights Reserved',
 }
 
 export async function getSiteData() {
@@ -21,7 +21,7 @@ export async function getSiteData() {
 export async function getMenuList() {
   return [
     { label: translations.menu_home, path: '/' },
-    { label: translations.menu_work, path: '/works' },
+    { label: translations.menu_work, path: '/work' },
     { label: translations.menu_performance, path: '/performance' },
     // { label: translations.menu_exhibition, path: "/exhibitions" },
     // { label: translations.menu_workshop, path: "/workshops" },

@@ -64,7 +64,10 @@ const Header = ({ menuList, siteData }: LoaderData) => {
             <nav>
               <ul className="mr-2 flex">
                 {menuList.map((menu) => {
-                  const isActive = pathname.startsWith(menu.path)
+                  const isActive =
+                    menu.path === '/'
+                      ? pathname === menu.path
+                      : pathname.startsWith(menu.path)
 
                   return (
                     <li key={menu.path}>

@@ -21,6 +21,7 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
           list={props.workList.map((v) => ({
             ...v,
             title: `${v.title} (${v.year})`,
+            slug: `/work/${v.slug}`,
           }))}
         />
       </main>
