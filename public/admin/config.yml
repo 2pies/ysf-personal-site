@@ -3,25 +3,28 @@ backend:
   branch: main
 media_folder: 'public/images/uploads'
 collections:
-  - label: About Page
-    name: about
-    file: 'src/cms/about.json'
-    extension: json
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Artist Bio, name: bio, widget: string }
-      - label: Exhibitions
-        name: exhibitions
-        widget: list
-        add_to_top: true
-      - label: Performances
-        name: performances
-        widget: list
-        add_to_top: true
-      - label: Awards
-        name: awards
-        widget: list
-        add_to_top: true
+  - label: Page
+    name: pages
+    files:
+      - label: About Page
+        name: about
+        file: 'src/cms/about.json'
+        extension: json
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Artist Bio, name: bio, widget: string }
+          - label: Exhibitions
+            name: exhibitions
+            widget: list
+            add_to_top: true
+          - label: Performances
+            name: performances
+            widget: list
+            add_to_top: true
+          - label: Awards
+            name: awards
+            widget: list
+            add_to_top: true
   - label: Blog
     name: blog
     folder: 'src/cms/blog'
