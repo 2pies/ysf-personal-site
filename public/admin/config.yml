@@ -22,7 +22,6 @@ collections:
         name: awards
         widget: list
         add_to_top: true
-
   - label: Blog
     name: blog
     folder: 'src/cms/blog'
