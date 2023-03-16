@@ -2,7 +2,7 @@ const headerHeight = 84;
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx}", "./public/**/*.json"],
   theme: {
     extend: {
       maxWidth: {

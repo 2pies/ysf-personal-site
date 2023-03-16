@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-import { marked } from 'marked'
-
 import { getHomeList } from '@/models/cms.server'
 import { getLayoutStaticProps, Layout } from '@/components/Layout'
 import { staticPage } from '@/typeUtils'
@@ -13,7 +11,7 @@ export async function getStaticProps() {
     props: {
       ...(await getLayoutStaticProps()),
       workList: await getHomeList().then((v) =>
-        v.map((cms) => ({ cms, html: marked(cms.description) })),
+        v.map((cms) => ({ cms, html: cms.description })),
       ),
     },
   }

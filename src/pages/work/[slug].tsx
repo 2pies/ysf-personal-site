@@ -1,5 +1,3 @@
-import { marked } from 'marked'
-
 import { getWorkList } from '@/models/cms.server'
 import { getLayoutStaticProps, Layout } from '@/components/Layout'
 import { type GetStaticPropsContext } from 'next'
@@ -24,7 +22,7 @@ export const getStaticProps = async (props: GetStaticPropsContext) => {
     props: {
       ...(await getLayoutStaticProps()),
       work,
-      html: work.template === 'basic' ? marked(work.body.trim()) : null,
+      html: work.template === 'basic' ? work.body.trim() : null,
     },
   }
 }

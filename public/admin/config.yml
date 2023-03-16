@@ -8,11 +8,11 @@ collections:
     files:
       - label: About Page
         name: about
-        file: 'src/cms/about.json'
+        file: 'public/cms/about.json'
         extension: json
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Artist Bio, name: bio, widget: string }
+          - { label: Artist Bio, name: bio, widget: text }
           - label: Exhibitions
             name: exhibitions
             widget: list
@@ -28,20 +28,17 @@ collections:
             widget: list
             add_to_top: true
             field: { label: item, name: item, widget: string }
-  - label: Blog
-    name: blog
-    folder: 'src/cms/blog'
+  - label: Performance
+    name: performance
+    folder: 'public/cms/performance'
     create: true
     extension: json
     slug: '{{slug}}'
     identifier_field: label
     fields:
-      - {
-          label: 'Layout',
-          name: 'layout',
-          widget: 'hidden',
-          default: 'district',
-        }
-      - { label: 'Label', name: 'label', widget: 'string' }
-      - { label: 'value', name: 'value', widget: 'string' }
-      - { label: 'Icon', name: 'icon', widget: 'image' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Year', name: 'year', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Preview', name: 'preview', widget: 'image' }
+      - { label: 'DetailsHtml', name: 'detailsHtml', widget: 'text' }

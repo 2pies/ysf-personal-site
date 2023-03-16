@@ -1,3 +1,15 @@
+import path from 'path'
+import fs from 'fs'
+
+type performanceT = {
+  slug: string
+  name: string
+  year: number
+  preview: string
+  description: string
+  detailsHtml: string
+}
+
 type Home = {
   imageSrc: string
   title: string
@@ -621,7 +633,19 @@ Video by Thisby Cheng
 ]
 
 const getWorkList = async () => workList
-const getPerformanceList = async () => performanceList
+const getPerformanceList = async () => {
+  const list = fs
+    .readdirSync(path.join(process.cwd(), 'public/cms/performance'))
+    .filter((item) => item.endsWith('.json'))
+    .map((item) => {
+      const data = fs.readFileSync(
+        path.join(process.cwd(), 'public/cms/performance', item),
+        'utf8',
+      )
+      return JSON.parse(data) as performanceT
+    })
+  return list
+}
 const getHomeList = async () => homeList
 
 export type { Work, Home }

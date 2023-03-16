@@ -1,0 +1,8 @@
+{
+  "slug": "the-squirm",
+  "name": "The Squirm",
+  "year": "2022",
+  "description": "2022, 45mins, Live Performance",
+  "preview": "/images/Performance/2022/2_The squirm/motion _1.jpg",
+  "detailsHtml": "<video class=\"w-full\" src=\"https://youtu.be/hlBtknFhRho\"></video>\n  <div class=\"grid grid-cols-2\">\n    <div class=\"flex justify-center item-center\">\n      <h1 class=\"text-2xl font-bold\">\"The squirm\", 2022, 45mins, Live Performance</h1>\n      <br />\n      <p>Bock the squirm</p>\n      <p>The squirm blocked a life</p>\n      <p>Life blocking our mind</p>\n    </div>\n    <slider class=\"aspect-[9/16]\" images=\"/images/Performance/2022/2_The squirm/motion _1.jpg,/images/Performance/2022/2_The squirm/motion _2.jpg,/images/Performance/2022/2_The squirm/motion _3.jpg,/images/Performance/2022/2_The squirm/motion _4.jpg\" />\n  </div>\n  <slider class=\"aspect-[16/9]\" images=\"/images/Performance/2022/2_The squirm/motion _5.jpg,/images/Performance/2022/2_The squirm/motion _6.jpg,/images/Performance/2022/2_The squirm/motion _7.jpg,/images/Performance/2022/2_The squirm/motion _8.jpg,/images/Performance/2022/2_The squirm/motion _9.jpg,/images/Performance/2022/2_The squirm/motion _10.jpg,/images/Performance/2022/2_The squirm/motion _11.jpg,/images/Performance/2022/2_The squirm/motion _12.jpg,/images/Performance/2022/2_The squirm/motion _13.jpg,/images/Performance/2022/2_The squirm/motion _14.jpg\" />"
+}
