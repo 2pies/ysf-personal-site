@@ -2,7 +2,7 @@ import { getLayoutStaticProps, Layout } from '@/components/Layout'
 import { staticPage } from '@/typeUtils'
 import Image from 'next/image'
 import img_cv_l from './img/cv_l.png'
-import cms from '@/cms/about.json'
+import cms from 'public/cms/about.json'
 
 export async function getStaticProps() {
   return {
