@@ -17,16 +17,19 @@ collections:
             name: exhibitions
             widget: list
             add_to_top: true
+            summary: '{{fields.item}}'
             field: { label: item, name: item, widget: string }
           - label: Performances
             name: performances
             widget: list
             add_to_top: true
+            summary: '{{fields.item}}'
             field: { label: item, name: item, widget: string }
           - label: Awards
             name: awards
             widget: list
             add_to_top: true
+            summary: '{{fields.item}}'
             field: { label: item, name: item, widget: string }
   - label: Performance
     name: performance
@@ -34,7 +37,7 @@ collections:
     create: true
     extension: json
     slug: '{{slug}}'
-    identifier_field: label
+    identifier_field: name
     fields:
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Name', name: 'name', widget: 'string' }
