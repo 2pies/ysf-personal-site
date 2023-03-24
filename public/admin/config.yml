@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: 'public/images/uploads'
+media_folder: 'public/images'
 collections:
   - label: Page
     name: pages
@@ -44,4 +44,9 @@ collections:
       - { label: 'Year', name: 'year', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Preview', name: 'preview', widget: 'image' }
-      - { label: 'DetailsHtml', name: 'detailsHtml', widget: 'text' }
+      - {
+          label: 'DetailsHtml',
+          name: 'detailsHtml',
+          widget: 'code',
+          default_language: 'html',
+        }
