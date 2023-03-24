@@ -28,6 +28,29 @@ const main = async () => {
   // recursively read all files in the directory
   // and rename them to lowercase
   await updateFiles(sourceDir, async (filePath) => {
+    if (filePath.includes('.DS_Store')) return;
+
+    //#region flatten folders
+    try {
+      const newFilePathTemp = '/' + filePath
+        .replace(sourceDir, '')
+        .replace(/\//g, '_')
+        .slice(1)
+        ;
+      const newFilePath = sourceDir.replace('performance', 'uploads') + newFilePathTemp;
+
+      fs.rename(filePath, newFilePath);
+
+    } catch (error) {
+      console.log('=================');
+      console.log(filePath);
+      throw error;
+    }
+
+
+    return
+    //#endregion
+
 
     //#region resize images
     try {
