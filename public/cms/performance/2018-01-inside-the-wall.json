@@ -1,0 +1,7 @@
+{
+  "slug": "2018-01-inside-the-wall",
+  "name": "Inside the wall",
+  "year": "2018",
+  "preview": "/images/uploads/2018_inside_the_wall_motion_1.jpg",
+  "detailsHtml": "<Image class=\"aspect-[4/3]\" src=\"/images/uploads/2018_inside_the_wall_motion_10.jpg\">\n\n<div class=\"flex flex-col gap-y-8 p-8\">\n    <h1 class=\"text-2xl font-bold\">“Inside the wall”, 2018, 5 hours</h1>\n    <p>Life, oppression, crowding, restraint, suffocation, silent acceptance. Who trapped us inside the walls?</p>\n    <p>生命、壓迫、擁擠、拘束、窒息、默默接受。是誰把我們困在圍牆內？</p>\n</div>\n\n<slider \n    class=\"aspect-[4/3] w-full\" \n    images=\"/images/uploads/2018_inside_the_wall_motion_1.jpg,\n      /images/uploads/2018_inside_the_wall_motion_2.jpg,\n      /images/uploads/2018_inside_the_wall_motion_3.jpg,\n      /images/uploads/2018_inside_the_wall_motion_4.jpg,\n      /images/uploads/2018_inside_the_wall_motion_5.jpg,\n      /images/uploads/2018_inside_the_wall_motion_6.jpg,\n      /images/uploads/2018_inside_the_wall_motion_7.jpg,\n      /images/uploads/2018_inside_the_wall_motion_8.jpg,\n      /images/uploads/2018_inside_the_wall_motion_9.jpg\"></slider>"
+}

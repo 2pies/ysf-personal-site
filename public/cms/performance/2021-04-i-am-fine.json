@@ -1,0 +1,7 @@
+{
+  "slug": "2021-03-i-am-fine",
+  "name": "I’m fine",
+  "year": "2021",
+  "preview": "/images/uploads/2021_2_i_m_fine_1_i_m_fine.jpg",
+  "detailsHtml": "<Image \n  class=\"aspect-[4/3] w-full\" \n  src=\"/images/uploads/2021_2_i_m_fine_2_i_m_fine.jpg\" />\n\n<div class=\"grid grid-cols-2\">\n  <div class=\"flex flex-col justify-center item-center p-4 gap-y-4\">\n    <h1 class=\"text-2xl font-bold\">\n      “I’m fine.”, 2021, ice, nail, Red Pitaya and glass\n    </h1>\n\n    <p>The cube-shaped ice hides thorny fruit<br />\n      Temperature and pressure<br />\n      Precipitate and sediments<br />\n      Changing form<br />\n      Melt into water<br />\n      Melt into gas\n    </p>\n  </div>\n  <Image \n    class=\"aspect-[3/4]\" \n    src=\"/images/uploads/2021_2_i_m_fine_1_i_m_fine.jpg\" />\n</div>\n\n<div class=\"grid grid-cols-2\">\n  <Image \n    class=\"aspect-[3/4]\" \n    src=\"/images/uploads/2021_2_i_m_fine_4_i_m_fine.jpg\" />\n  <div class=\"relative flex flex-col justify-center item-center p-4 gap-y-4\">\n    <p>立方體形的冰裹藏著充滿刺的果</p>\n    <p>溫度和壓力</p>\n    <p>沉澱物和沉積物</p>\n    <p>改變中形態</p>\n    <p>熔化成水</p>\n    <p>熔化成氣</p>\n\n    <p class=\"absolute bottom-1 left-1\">Photo by Gustav Lindgren</p>\n  </div>\n</div>\n\n<Image \n  class=\"aspect-[4/3] w-full\" \n  src=\"/images/uploads/2021_2_i_m_fine_6_i_m_fine.jpg\" />\n\n<Image\n  class=\"aspect-[4/3] w-full\"\n  src=\"/images/uploads/2021_2_i_m_fine_3_i_m_fine.jpg\" />\n\n<div class=\" max-w-[400px] mx-auto\">\n  <youtube \n    src=\"https://youtu.be/Kb8lGWmr-zs\" short></youtube>\n</div>"
+}

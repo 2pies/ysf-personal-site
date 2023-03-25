@@ -1,0 +1,7 @@
+{
+  "slug": "2021-0-something",
+  "name": "Something",
+  "year": "2021",
+  "preview": "/images/uploads/2021_1_something_motion_1.jpg",
+  "detailsHtml": "<youtube src=\"https://youtu.be/KGa2uY8g-gU\"></youtube>\n<div class=\"grid grid-cols-2\">\n  <slider \n    class=\"aspect-[3/4]\" \n    images=\"/images/uploads/2021_1_something_motion_1.jpg,\n        /images/uploads/2021_1_something_motion_2.jpg,\n        /images/uploads/2021_1_something_motion_3.jpg,\n        /images/uploads/2021_1_something_motion_4.jpg,\n        /images/uploads/2021_1_something_motion_5.jpg,\n        /images/uploads/2021_1_something_motion_6.jpg\"></slider>\n  <div class=\"relative flex flex-col justify-center item-center p-4 gap-y-2\">\n    <h1 class=\"text-2xl font-bold\">\n      “Something”, 2021, 30 mins\n    </h1>\n    <p>Nothing and nothing</p>\n    <p class=\"absolute bottom-1 left-1\">Body paint by Ng Ka Yi<br />\n      Photo by Gustav Lindgren</p>\n  </div>\n</div>\n<div class=\"grid grid-cols-2\">\n  <youtube short src=\"https://youtu.be/yyyYMNPF9ck\"></youtube>\n  <youtube short src=\"https://youtu.be/jDIxq_xyMAw\"></youtube>\n</div>"
+}

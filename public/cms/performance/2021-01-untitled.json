@@ -1,0 +1,7 @@
+{
+  "slug": "2021-01-untitled",
+  "name": "Untitled",
+  "year": "2021",
+  "preview": "/images/uploads/2021_5_phantom_motion_1.jpg",
+  "detailsHtml": "<youtube src=\"https://youtu.be/IVkL1KkuTWA\"></youtube>\n\n<div class=\"grid grid-cols-2\">\n    <slider \n        class=\"aspect-[3/4] w-full\" \n        images=\"/images/uploads/2021_5_phantom_motion_1.jpg,\n            /images/uploads/2021_5_phantom_motion_2.jpg,\n            /images/uploads/2021_5_phantom_motion_3.jpg,\n            /images/uploads/2021_5_phantom_motion_4.jpg,\n            /images/uploads/2021_5_phantom_motion_5.jpg,\n            /images/uploads/2021_5_phantom_motion_6.jpg\"></slider>\n\n    <div class=\"flex flex-col justify-center gap-y-4 p-4\">\n        <h1 class=\"text-2xl font-bold\">\"Untitled\" , 2021, 120mins</h1>\n\n        <p>Escape from the illusion</p>\n        <p>Just imagine</p>\n        <p>逃離幻覺</p>\n        <p>想像一下</p>\n\n    </div>\n</div>\n\n<youtube pause src=\"https://youtu.be/5dwbNvFPn4o\"></youtube>\n<slider \n    class=\"aspect-[4/3] w-full\" \n    images=\"/images/uploads/2021_5_phantom_motion_7.jpg,\n        /images/uploads/2021_5_phantom_motion_8.jpg,\n        /images/uploads/2021_5_phantom_motion_9.jpg,\n        /images/uploads/2021_5_phantom_motion_10.jpg\"></slider>\n\n<youtube pause src=\"https://youtu.be/17MPDkAinyE\"></youtube>"
+}
