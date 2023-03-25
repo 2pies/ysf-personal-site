@@ -1,0 +1,8 @@
+{
+  "slug": "turn-as-turn",
+  "name": "Turn as Turn",
+  "year": "2022",
+  "description": "“Turn as Turn”, 2022, 3.28mins, Performance Documentary",
+  "preview": "/images/uploads/2022_8_turn_as_turn_turn_as_turn.jpg",
+  "detailsHtml": "<youtube src=\"https://youtu.be/X2nPF-f9w3U\"></youtube>\n<div class=\"grid grid-cols-3\">\n  <div class=\"flex flex-col p-4 gap-y-4\">\n    <h1 class=\"text-2xl font-bold\">\n      “Turn as Turn”, 2022, 3.28mins, Performance Documentary\n    </h1>\n    <p>\n      My body rotated in the opposite direction on the waist-twisting trainer. When the tension reached the unbearable tension of the equipment, I tried to resist the movement to generate tension and forcibly rotated in the opposite direction, but my body still resisted the movement and kept pulling in the other direction.\n    </p>\n  </div>\n  <Image \n    class=\"aspect-[4/3] col-span-2\" \n    src=\"/images/uploads/2022_8_turn_as_turn_turn_as_turn.jpg\" />\n</div>\n<div class=\"grid grid-cols-3\">\n  <Image \n    class=\"aspect-[4/3] col-span-2\" \n    src=\"/images/uploads/2022_8_turn_as_turn_turn_as_turn1.jpg\" />\n  <div class=\"flex flex-col justify-center item-center p-4 gap-y-4\">\n    <p>身體在扭腰訓練器上逆向轉動，當到達器材不能承受的張力時，便試圖抗行産生拉力，強行順向轉動，而我的身體依舊抗行，一直往另一個方向拉扯。</p>\n  </div>\n</div>"
+}
