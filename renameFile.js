@@ -2,7 +2,8 @@ const sharp = require('sharp')
 const fs = require('fs').promises;
 
 // const sourceDir = __dirname + '/public/images/performance';
-const sourceDir = './public/images/performance';
+// const sourceDir = './public/images/performance';
+const sourceDir = './public/images/uploads';
 
 const getDirAndFile = (dir) => {
   const arr = dir.split('/');
@@ -29,6 +30,37 @@ const main = async () => {
   // and rename them to lowercase
   await updateFiles(sourceDir, async (filePath) => {
     if (filePath.includes('.DS_Store')) return;
+
+    //#region fix file rotation
+    try {
+      const ext = filePath.toLowerCase().split('.').pop();
+
+      if (!['jpg', 'png', 'jpeg', 'heic'].includes(ext))
+        return;
+
+      if (!filePath.includes('2022_2_the'))
+        return;
+
+      const tempImage = filePath.replace(`.${ext}`, `-temp.${ext}`);
+
+      await fs.rename(filePath, tempImage);
+
+      // const { width, height, orientation } = await sharp(filePath).metadata();
+
+      // console.log(filePath, width, height, orientation);
+
+      await sharp(tempImage)
+        .rotate()
+        .toFile(filePath.replace(`-temp.${ext}`, `.${ext}`))
+
+      await fs.unlink(tempImage);
+
+    } catch (error) {
+      console.log('=================');
+      console.log(filePath);
+      throw error;
+    }
+    return
 
     //#region flatten folders
     try {
@@ -60,7 +92,7 @@ const main = async () => {
       if (!['jpg', 'png', 'jpeg', 'heic'].includes(ext2))
         return;
 
-      const tempImage = filePath.replace(`.${ext2}`, `-temp.${ext2}`);
+      const tempImage = filePath.replace(`.${ext2}`, ` - temp.${ext2}`);
 
       await fs.rename(filePath, tempImage);
 
