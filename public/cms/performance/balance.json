@@ -1,0 +1,7 @@
+{
+  "slug": "balance",
+  "name": "Balance",
+  "year": "2022",
+  "preview": "/images/uploads/2022_6_balance__dsf1031.jpg",
+  "detailsHtml": "<Image \n  class=\"aspect-[4/3] w-full\" \n  src=\"/images/uploads/2022_6_balance__dsf1031.jpg\" />\n<div class=\"flex flex-col py-2 gap-y-4\">\n  <h1 class=\"text-2xl font-bold\">\n    “Balance”, 60mins, live performance, PING PANG X SIU FONG YEUNG\n  </h1>\n  <p>\n    Finding the balance point in between. It’s about gravity, weight, senses, and silent understanding. \n  </p>\n</div>\n<slider \n      class=\"aspect-[4/3] w-full\" \n      images=\"/images/uploads/2022_6_balance_motion_1.jpg,\n      /images/uploads/2022_6_balance_motion_2.jpg,\n      /images/uploads/2022_6_balance_motion_3.jpg,\n      /images/uploads/2022_6_balance_motion_4.jpg,\n      /images/uploads/2022_6_balance_motion_5.jpg,\n      /images/uploads/2022_6_balance_motion_6.jpg\" />"
+}
