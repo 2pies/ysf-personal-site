@@ -11,7 +11,7 @@ type propsT = {
 
 const Gallery = ({ list }: propsT) => {
   return (
-    <div className="container grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4">
+    <div className="container grid grid-cols-2 md:grid-cols-3">
       {list.map((image) => (
         <div
           key={image.title}

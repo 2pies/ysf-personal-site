@@ -644,6 +644,9 @@ const getPerformanceList = async () => {
       )
       return JSON.parse(data) as performanceT
     })
+    .sort((a, b) => {
+      return b.slug.localeCompare(a.slug)
+    })
   return list
 }
 const getHomeList = async () => homeList
