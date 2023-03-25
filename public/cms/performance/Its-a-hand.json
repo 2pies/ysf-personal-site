@@ -1,0 +1,7 @@
+{
+  "slug": "Its-a-hand",
+  "name": "It’s a hand",
+  "year": "2022",
+  "preview": "/images/uploads/2022_9_it_s_a_hand_it_s_a_hand.jpg",
+  "detailsHtml": "<youtube src=\"https://youtu.be/a7SqqEE-Fa0\"></youtube>\n<div class=\"grid grid-cols-2\">\n  <div class=\"flex flex-col p-4 gap-y-4\">\n    <h1 class=\"text-2xl font-bold\">\n      \"It’s a hand.\", 2022, 6.31mins, Performance Documentary \n    </h1>\n    <p>\n      Through repeated movements, the body reached its limit.  A new form emerges from the disappearance of the original subject.\n    </p>\n  </div>\n  <Image \n    class=\"aspect-[4/3]\" \n    src=\"/images/uploads/2022_9_it_s_a_hand_it_s_a_hand.jpg\" />\n</div>\n<div class=\"grid grid-cols-3\">\n  <Image \n    class=\"aspect-[16/9] col-span-2\" \n    src=\"/images/uploads/2022_9_it_s_a_hand_it_s_a_hand1.png\" />\n  <div class=\"flex flex-col justify-center item-center p-4 gap-y-2\">\n    <p>以重複的動作</p>\n    <p>過程到達了身體的極限</p>\n    <p>令原態消失</p>\n    <p>重塑了一個新的形態出現</p>\n  </div>\n</div>"
+}
