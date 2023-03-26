@@ -3,7 +3,8 @@ const fs = require('fs').promises;
 
 // const sourceDir = __dirname + '/public/images/performance';
 // const sourceDir = './public/images/Work';
-const sourceDir = './public/images/uploads';
+// const sourceDir = './public/images/uploads';
+const sourceDir = './public/images/Exhibition';
 
 const getDirAndFile = (dir) => {
   const arr = dir.split('/');
@@ -30,6 +31,51 @@ const main = async () => {
   // and rename them to lowercase
   await updateFiles(sourceDir, async (filePath) => {
     if (filePath.includes('.DS_Store')) return;
+
+
+    //#region exhibition
+    try {
+
+      // 1
+      // console.log(filePath);
+
+      // const [dir, file] = getDirAndFile(filePath);
+      // const newFileName = 'exhibition-' + file.toLowerCase()
+
+      // const newFilePath = dir + '/' + newFileName;
+      // await fs.rename(filePath, newFilePath);
+
+      // 2
+      // const ext = filePath.toLowerCase().split('.').pop();
+      // const tempImage = filePath.replace(`.${ext}`, `-temp.${ext}`);
+
+      // await fs.rename(filePath, tempImage);
+
+      // await sharp(tempImage)
+      //   .rotate()
+      //   .resize(1920)
+      //   .toFile(filePath.replace(`-temp.${ext}`, `.${ext}`))
+
+      // await fs.unlink(tempImage);
+
+      // 3
+      // const newFilePathTemp = '/' + filePath
+      //   .replace(sourceDir, '')
+      //   .slice(1)
+      //   ;
+      // const newFilePath = sourceDir.replace('Exhibition', 'uploads') + newFilePathTemp;
+      // fs.rename(filePath, newFilePath);
+
+
+
+
+    } catch (error) {
+      console.log('=================');
+      console.log(filePath);
+      throw error;
+    }
+    return
+    //#endregion
 
     //#region rename files
     try {

@@ -1,0 +1,94 @@
+{
+  "exhibitions": [
+    {
+      "image": "/images/uploads/exhibition-001.jpg",
+      "url": "https://www.taikwun.hk/en/programme/detail/myth-makers-spectrosynthesis-iii/1103",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-002.png",
+      "url": "",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-003.jpg",
+      "url": "https://www.facebook.com/events/eaton-hk/movement-festival-舞動節-2022/376321637993728/",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-004.jpg",
+      "url": "https://www.instagram.com/p/Cf3sxXYPMEc/?hl=zh-tw",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-005.jpeg",
+      "url": "https://www.art-mate.net/doc/62327?fbclid=IwAR2-H-nHoHlFM94sHBJfTfD9KYlE3gxgI5UBo139BAlH8_eHA_cO5jWZ_6w",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-006.jpeg",
+      "url": "https://www.instagram.com/p/CcrX1PnpKT5/",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-007.jpeg",
+      "url": "https://www.instagram.com/p/CXXdOW9P33m/",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-008.jpg",
+      "url": "",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-009.jpeg",
+      "url": "https://www.instagram.com/p/CTMdACtJ5v-/",
+      "size": "square"
+    },
+    {
+      "image": "/images/uploads/exhibition-010.jpeg",
+      "url": "https://www.a-n.co.uk/events/storm/?fbclid=IwAR0HmPvLakccECJ986V5rhDOJiK9R9AP2IbC2zE1532sPqQO-fvR4D6e1eM",
+      "size": "long"
+    },
+    {
+      "image": "/images/uploads/exhibition-011.jpg",
+      "url": "https://www.hkasalumniarchive.com/eventsarchive/-noctilucence-",
+      "size": "long"
+    },
+    {
+      "image": "/images/uploads/exhibition-012.jpg",
+      "url": "https://www.facebook.com/events/511748370246338?locale=tw_TW",
+      "size": "tall"
+    },
+    {
+      "image": "/images/uploads/exhibition-013.jpeg",
+      "url": "",
+      "size": "tall"
+    },
+    {
+      "image": "/images/uploads/exhibition-014.png",
+      "url": "https://sa.hkbu.edu.hk/career/f/news_event/5278/23149/190212%20South%20Island%20Art%20Day%202019%20Press%20Release.pdf",
+      "size": "tall"
+    },
+    {
+      "image": "/images/uploads/exhibition-015.jpg",
+      "url": "https://www.hkac.org.hk/calendar_detail/?u=8Ui_8tvgtTw&lang=tc",
+      "size": "tall"
+    },
+    {
+      "image": "/images/uploads/exhibition-016.jpg",
+      "url": "https://mp.weixin.qq.com/s/mNQPCJ92YPLYX0kpbgddLQ",
+      "size": "tall"
+    },
+    {
+      "image": "/images/uploads/exhibition-017.jpg",
+      "url": "http://www.hk-aga.org/event/south-island-art-day/",
+      "size": "tall"
+    },
+    {
+      "image": "/images/uploads/exhibition-018.png",
+      "url": "https://www.art-mate.net/doc/46570?name=異遊人2-黑乳白炭舞踏祭",
+      "size": "super-long"
+    }
+  ]
+}

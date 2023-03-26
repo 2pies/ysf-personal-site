@@ -25,6 +25,14 @@ type homeT = {
   }>
 }
 
+type exhibitionT = {
+  exhibitions: Array<{
+    image: string
+    url: string
+    size: 'square' | 'long' | 'super-long' | 'tall'
+  }>
+}
+
 const getWorkList = async () => {
   const list = fs
     .readdirSync(path.join(process.cwd(), 'public/cms/work'))
@@ -69,5 +77,15 @@ const getHomeList = async () => {
   return homePage.works
 }
 
-export { getWorkList, getPerformanceList, getHomeList }
-export type { performanceT, workT, homeT }
+const getExhibitionList = async () => {
+  const exhibitionPageRaw = fs.readFileSync(
+    path.join(process.cwd(), 'public/cms/exhibition.json'),
+    'utf8',
+  )
+
+  const exhibitionPage = JSON.parse(exhibitionPageRaw) as exhibitionT
+  return exhibitionPage
+}
+
+export { getWorkList, getPerformanceList, getHomeList, getExhibitionList }
+export type { performanceT, workT, homeT, exhibitionT }
