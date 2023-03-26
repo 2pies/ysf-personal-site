@@ -39,6 +39,7 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
                   className="h-main-h w-full min-w-full object-cover transition-all"
                   src={item.image}
                   alt=""
+                  priority
                   fill
                 />
 
