@@ -20,7 +20,9 @@ pause short
 
 <!-- grid -->
 <div class="grid grid-cols-2">
-  <div class="flex flex-col justify-center gap-y-4 p-4"></div>
+    <!-- items-center ;;;  -->
+    <!-- justify-center ;;;; v align -->
+  <div class="flex flex-col gap-y-4 p-12"></div> 
   ....
 </div>
 
