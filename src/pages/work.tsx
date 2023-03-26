@@ -19,9 +19,9 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
       <main>
         <Gallery
           list={props.workList.map((v) => ({
-            ...v,
-            title: `${v.title} (${v.year})`,
+            title: `${v.name} (${v.year})`,
             slug: `/work/${v.slug}`,
+            imageSrc: v.preview,
           }))}
         />
       </main>

@@ -16,15 +16,6 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
   return (
     <Layout {...props}>
       <main className="container">
-        {/* <Slider
-          sliderClass="bg-blue-200"
-          itemClass=" w-full min-w-full aspect-video"
-        >
-          <div>11111111111111111111111111111</div>
-          <div>22222222222222222222222222222</div>
-          <div>33333333333333333333333333333</div>
-        </Slider> */}
-
         <Gallery
           list={props.performanceList.map((v) => ({
             title: `${v.name} (${v.year})`,

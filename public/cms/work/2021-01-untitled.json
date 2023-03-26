@@ -1,0 +1,7 @@
+{
+  "slug": "2021-01-untitled",
+  "name": "Untitled",
+  "year": "2021",
+  "preview": "/images/uploads/work_2021_phantom_1_2.jpg",
+  "detailsHtml": "<div class=\"grid grid-cols-2\">\n  <image class=\"aspect-[1/1]\" src=\"/images/uploads/work_2021_phantom_1_2.jpg\"></image>\n  <image class=\"aspect-[1/1]\" src=\"/images/uploads/work_2021_phantom_2_2.jpg\"></image>\n</div>\n<div class=\"grid grid-cols-3\">\n  <image class=\"aspect-[1/1] col-span-2\" src=\"/images/uploads/work_2021_phantom_212_1_2_.jpg\"></image>\n  <div class=\"flex flex-col justify-center gap-y-4 p-4\">\n    <h1 class=\"text-2xl font-bold\">\"Untitled\" , 2021, charcoal, pastels, ink on paper </h1>\n    <p>Escape from the illusion</p>\n    <p>Just imagine</p>\n    <p>逃離幻覺</p>\n    <p>想像一下</p>\n  </div>\n</div>\n<div class=\"grid grid-cols-2\">\n  <image class=\"aspect-[1/1]\" src=\"/images/uploads/work_2021_phantom_212_1_1_3.jpg\"></image>\n  <image class=\"aspect-[1/1]\" src=\"/images/uploads/work_2021_phantom_212_1_2.jpg\"></image>\n  <image class=\"aspect-[1/1]\" src=\"/images/uploads/work_2021_phantom_2021_07_10_102.jpg\"></image>\n  <image class=\"aspect-[1/1]\" src=\"/images/uploads/work_2021_phantom_img_7286_2.jpg\"></image>\n</div>"
+}

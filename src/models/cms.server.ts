@@ -6,7 +6,14 @@ type performanceT = {
   name: string
   year: number
   preview: string
-  description: string
+  detailsHtml: string
+}
+
+type workT = {
+  slug: string
+  name: string
+  year: number
+  preview: string
   detailsHtml: string
 }
 
@@ -632,7 +639,23 @@ Video by Thisby Cheng
   },
 ]
 
-const getWorkList = async () => workList
+const getWorkList = async () => {
+  const list = fs
+    .readdirSync(path.join(process.cwd(), 'public/cms/work'))
+    .filter((item) => item.endsWith('.json'))
+    .map((item) => {
+      const data = fs.readFileSync(
+        path.join(process.cwd(), 'public/cms/work', item),
+        'utf8',
+      )
+      return JSON.parse(data) as workT
+    })
+    .sort((a, b) => {
+      return b.slug.localeCompare(a.slug)
+    })
+  return list
+}
+
 const getPerformanceList = async () => {
   const list = fs
     .readdirSync(path.join(process.cwd(), 'public/cms/performance'))
