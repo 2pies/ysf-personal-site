@@ -6,6 +6,20 @@ collections:
   - label: Page
     name: pages
     files:
+      - label: Home Page
+        name: home
+        file: 'public/cms/home.json'
+        extension: json
+        fields:
+          - label: Work/Performances
+            name: works
+            widget: list
+            add_to_top: true
+            summary: '{{fields.description}}'
+            field:
+              - { label: Image, name: image, widget: image }
+              - { label: Description, name: description, widget: text }
+              - { label: url, name: url, widget: string }
       - label: About Page
         name: about
         file: 'public/cms/about.json'
@@ -42,7 +56,6 @@ collections:
       - { label: 'Slug', name: 'slug', widget: 'string' } # for url
       - { label: 'Name', name: 'name', widget: 'string' } # preview display
       - { label: 'Year', name: 'year', widget: 'string' } # preview display
-      # - { label: 'Description', name: 'description', widget: 'string' } # home page
       - { label: 'Preview', name: 'preview', widget: 'image' } # listing page image
       - {
           # details page content
