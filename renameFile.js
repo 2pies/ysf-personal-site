@@ -2,7 +2,7 @@ const sharp = require('sharp')
 const fs = require('fs').promises;
 
 // const sourceDir = __dirname + '/public/images/performance';
-// const sourceDir = './public/images/performance';
+// const sourceDir = './public/images/Work';
 const sourceDir = './public/images/uploads';
 
 const getDirAndFile = (dir) => {
@@ -31,29 +31,36 @@ const main = async () => {
   await updateFiles(sourceDir, async (filePath) => {
     if (filePath.includes('.DS_Store')) return;
 
-    //#region fix file rotation
+    //#region rename files
     try {
-      const ext = filePath.toLowerCase().split('.').pop();
+      const targetImages = [
+        '2017_falling_down_in_the_sea_of_something',
+        '2019_body_schema',
+        '2020_1_disappear',
+        '2020_2_vagueness',
+        '2021_phantom',
+      ]
 
-      if (!['jpg', 'png', 'jpeg', 'heic'].includes(ext))
-        return;
+      const isTargetImage = targetImages.some(targetImage => filePath.includes(targetImage));
+      if (!isTargetImage) return;
 
-      if (!filePath.includes('2022_2_the'))
-        return;
+      const [dir, file] = getDirAndFile(filePath);
+      const newFileName = 'work_' + file
+      // .toLowerCase()
+      // .replace(/no./g, 'no')
+      // .replace(/-/g, '_')
+      // .replace(/ /g, '_')
+      // .replace(/’/g, '_')
+      // .replace(/,/g, '_')
+      // .replace(/\(/g, '_')
+      // .replace(/\)/g, '_')
+      // .replace(/__/g, '_')
+      // .replace(/__/g, '_')
+      // .replace(/[^a-zA-Z0-9_.]/g, v => 'x')
 
-      const tempImage = filePath.replace(`.${ext}`, `-temp.${ext}`);
-
-      await fs.rename(filePath, tempImage);
-
-      // const { width, height, orientation } = await sharp(filePath).metadata();
-
-      // console.log(filePath, width, height, orientation);
-
-      await sharp(tempImage)
-        .rotate()
-        .toFile(filePath.replace(`-temp.${ext}`, `.${ext}`))
-
-      await fs.unlink(tempImage);
+      // console.log(newFileName);
+      const newFilePath = dir + '/' + newFileName;
+      await fs.rename(filePath, newFilePath);
 
     } catch (error) {
       console.log('=================');
@@ -61,65 +68,109 @@ const main = async () => {
       throw error;
     }
     return
+
+    //#endregion
+
+    //#region fix file rotation
+    // try {
+    //   const ext = filePath.toLowerCase().split('.').pop();
+
+    //   if (!['jpg', 'png', 'jpeg', 'heic'].includes(ext))
+    //     return;
+
+    //   if (!filePath.includes('2022_2_the'))
+    //     return;
+
+    //   const tempImage = filePath.replace(`.${ext}`, `-temp.${ext}`);
+
+    //   await fs.rename(filePath, tempImage);
+
+    //   // const { width, height, orientation } = await sharp(filePath).metadata();
+
+    //   // console.log(filePath, width, height, orientation);
+
+    //   await sharp(tempImage)
+    //     .rotate()
+    //     .toFile(filePath.replace(`-temp.${ext}`, `.${ext}`))
+
+    //   await fs.unlink(tempImage);
+
+    // } catch (error) {
+    //   console.log('=================');
+    //   console.log(filePath);
+    //   throw error;
+    // }
+    // return
 
     //#region flatten folders
-    try {
-      const newFilePathTemp = '/' + filePath
-        .replace(sourceDir, '')
-        .replace(/\//g, '_')
-        .slice(1)
-        ;
-      const newFilePath = sourceDir.replace('performance', 'uploads') + newFilePathTemp;
+    // try {
+    //   const newFilePathTemp = '/' + filePath
+    //     .replace(sourceDir, '')
+    //     .replace(/\//g, '_')
+    //     .slice(1)
+    //     ;
+    //   const newFilePath = sourceDir.replace('Work', 'uploads') + newFilePathTemp;
 
-      fs.rename(filePath, newFilePath);
+    //   fs.rename(filePath, newFilePath);
 
-    } catch (error) {
-      console.log('=================');
-      console.log(filePath);
-      throw error;
-    }
+    // } catch (error) {
+    //   console.log('=================');
+    //   console.log(filePath);
+    //   throw error;
+    // }
 
 
-    return
+    // return
     //#endregion
 
 
     //#region resize images
-    try {
+    // try {
 
-      const ext2 = filePath.toLowerCase().split('.').pop();
+    //   const ext2 = filePath.split('.').pop();
+    //   const ext = ext2.toLowerCase();
 
-      if (!['jpg', 'png', 'jpeg', 'heic'].includes(ext2))
-        return;
+    //   if (!['jpg', 'png', 'jpeg'].includes(ext)) {
+    //     // , 'heic'
+    //     console.log('=================');
+    //     console.log(filePath);
+    //     return;
+    //   }
 
-      const tempImage = filePath.replace(`.${ext2}`, ` - temp.${ext2}`);
+    //   const tempImage = filePath.replace(`.${ext2}`, ` - temp.${ext}`);
 
-      await fs.rename(filePath, tempImage);
+    //   await fs.rename(filePath, tempImage);
 
-      await sharp(tempImage)
-        .resize(1920)
-        .toFile(filePath.replace(`.${ext2}`, '.jpg'))
+    //   await sharp(tempImage)
+    //     .rotate()
+    //     .resize(1920)
+    //     .toFile(filePath.replace(`.${ext2}`, '.jpg'))
+    //   // console.count(filePath);
+    //   // console.count('count1');
 
-      await fs.unlink(tempImage);
+    //   await fs.unlink(tempImage);
+    // } catch (error) {
+    //   console.log('=================');
+    //   console.log(filePath);
+    //   throw error;
 
-      return
-    } catch (error) {
-      console.log('=================');
-      console.log(filePath);
-      throw error;
+    // }
+    // return
 
-    }
     //#endregion
+
+    // #region rename files
+    return
 
     const newFilePath = filePath
       .toLowerCase()
       .replace(/ /g, '_')
       .replace(/’/g, '_')
-      .replace(/9_it_s_a_hand\./g, '9_it_s_a_hand')
+      // .replace(/9_it_s_a_hand\./g, '9_it_s_a_hand')
       .replace(/\.\./g, '.')
       .replace(/__/g, '_')
       .replace(/__/g, '_')
-      .replace('_strangers_in_the_garden_2-_black_milk_white_coal_', 'strangers_in_the_garden_2_black_milk_white_coal')
+      // .replace('_strangers_in_the_garden_2-_black_milk_white_coal_', 'strangers_in_the_garden_2_black_milk_white_coal')
       // .replace('2_i_m_fine.', '2_i_m_fine')
       ;
 
@@ -128,32 +179,33 @@ const main = async () => {
     if (!['jpg', 'png', 'jpeg', 'docx', 'mov', 'mp4', 'heic'].includes(ext))
       console.error(`Unknown file extension: ${ext} in ${filePath}`);
 
-    const [dir, file] = getDirAndFile(newFilePath);
-    if (dir.endsWith('-modified')) {
-      const newDir = dir.replace('-modified', '');
-      await fs.mkdir(newDir, { recursive: true });
-      await fs.rename(filePath, newDir + '/' + file);
-      console.count('count2');
+    // const [dir, file] = getDirAndFile(newFilePath);
+    // if (dir.endsWith('-modified')) {
+    //   const newDir = dir.replace('-modified', '');
+    //   await fs.mkdir(newDir, { recursive: true });
+    //   await fs.rename(filePath, newDir + '/' + file);
+    //   console.count('count2');
 
-      return;
-    }
+    //   return;
+    // }
 
     if (filePath !== newFilePath) {
-      if (ext === 'docx') {
+      if (ext === 'docx' || ext === 'mov' || ext === 'mp4') {
         await fs.unlink(filePath);
       } else {
-        const [dir, file] = getDirAndFile(newFilePath);
-        const newDir = dir + '-modified';
-        await fs.mkdir(newDir, { recursive: true });
-        await fs.rename(filePath, newDir + '/' + file);
+        // const [dir, file] = getDirAndFile(newFilePath);
+        // const newDir = dir + '-modified';
+        // await fs.mkdir(newDir, { recursive: true });
+        // await fs.rename(filePath, newDir + '/' + file);
       }
 
-      console.log(filePath);
-      console.log(newFilePath);
-      console.log('-----------------');
-      console.count('count');
+      // console.log(filePath);
+      // console.log(newFilePath);
+      // console.log('-----------------');
+      // console.count('count');
     }
 
+    //#endregion
 
     // fs.rename(filePath, newFilePath, (err) => {
     //   if (err) {
