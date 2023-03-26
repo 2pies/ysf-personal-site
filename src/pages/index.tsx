@@ -17,7 +17,7 @@ export async function getStaticProps() {
 }
 
 export default function Index(props: staticPage<typeof getStaticProps>) {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <Layout {...props}>

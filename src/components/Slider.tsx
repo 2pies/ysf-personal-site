@@ -1,5 +1,6 @@
 import { cn } from '@/styles/classnames'
-import { Children, useId, useState } from 'react'
+import { useTimeIntervals } from '@/utils/react-hooks'
+import { Children, useId, useRef, useState } from 'react'
 
 // only support horizontal slider
 // only support full width slider
@@ -14,6 +15,7 @@ type propsT = {
 export const Slider = (props: propsT) => {
   const { children, sliderClass, itemClass } = props
 
+  const sliderRef = useRef<HTMLDivElement>(null)
   const [index, setIndex] = useState(0)
   const sliderItems = Children.toArray(children)
 
@@ -21,24 +23,31 @@ export const Slider = (props: propsT) => {
   const getItemId = (index: number) => `${itemId}${index}`
 
   const onPrev = () => {
+    if (!sliderRef.current) return
     const newIndex = index === 0 ? sliderItems.length - 1 : index - 1
     const item = document.getElementById(getItemId(newIndex))
     setIndex(newIndex)
     if (!item) return
-    item.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    const itemLeft = item.offsetLeft
+    sliderRef.current.scrollTo({ left: itemLeft, behavior: 'smooth' })
   }
 
   const onNext = () => {
+    if (!sliderRef.current) return
     const newIndex = sliderItems.length - 1 === index ? 0 : index + 1
     const item = document.getElementById(getItemId(newIndex))
     setIndex(newIndex)
     if (!item) return
-    item.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    const itemLeft = item.offsetLeft
+    sliderRef.current.scrollTo({ left: itemLeft, behavior: 'smooth' })
   }
+
+  useTimeIntervals(3000, onNext)
 
   return (
     <div className="relative">
       <div
+        ref={sliderRef}
         className={cn('flex snap-x snap-mandatory overflow-auto', sliderClass)}
       >
         {sliderItems.map((Child, index) => (
@@ -52,16 +61,42 @@ export const Slider = (props: propsT) => {
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-0 -translate-y-1/2 bg-white p-2 text-black"
+        className="absolute top-1/2 left-4 aspect-square rounded-full border border-black bg-white p-2 opacity-40 hover:opacity-70"
         onClick={onPrev}
       >
-        ﹤
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
       </button>
       <button
-        className="absolute top-1/2 right-0 -translate-y-1/2 bg-white p-2 text-black"
+        className="absolute top-1/2 right-4 aspect-square rounded-full border border-black bg-white p-2 opacity-40 hover:opacity-70"
         onClick={onNext}
       >
-        ﹥
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
       </button>
     </div>
   )
