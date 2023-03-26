@@ -17,66 +17,13 @@ type workT = {
   detailsHtml: string
 }
 
-type Home = {
-  imageSrc: string
-  title: string
-  description: string
-  slug: string | null
+type homeT = {
+  works: Array<{
+    image: string
+    description: string
+    url: string
+  }>
 }
-
-const homeList: Home[] = [
-  {
-    imageSrc: '/images/2022/chokstick/No.27.jpg',
-    title: '百家碗筷',
-    slug: null,
-    description: `
-No.27  
-她說雙魚座一點也不難搞  
-她說她是獨生女  
-她說曾經也希望自己有哥哥或姐姐  
-她想被人疼愛  
------------
-More stories are coming soon...
-    
-    `,
-  },
-  {
-    imageSrc: '/images/2022/turn/1.png',
-    title: 'Turn as Turn',
-    slug: '/performance/turn-as-turn',
-    description: `“Turn as Turn”, 2022, 3.28mins, Performance Documentary`,
-  },
-  {
-    imageSrc: '/images/2022/hand/1.png',
-    title: 'It’s a hand',
-    slug: '/performance/it-is-a-hand',
-    description: `
-"It’s a hand." , 2022, Performance Documentary
-
-Through repeated movements, the body reached its limit. A new form emerges from the disappearance of the original subject.
-
-以重複的動作，過程到達了身體的極限，令原態消失，重塑了一個新的形態出現。
-    `,
-  },
-  {
-    imageSrc: '/images/2022/frag/1.jpg',
-    title: 'Fragilely Connected',
-    slug: '/performance/fragilely-connected',
-    description: `
-2022 Spring Equinox Performance
-
-“Fragilely Connected”, 2022, Performance Documentary
-
-It was 2022 Equinox, a Sunday. It was inside an alined playground where people used to meet up while children play.
-With that green fabric, we tried to connected and yet we were kept in a distance. Movements seemed to be in response yet tensioned with fragileness.
-
-Performed by Yeung Siu Fong & RiK Wing Kei Yu
-Photo by Ann Huang
-Video by Thisby Cheng
-20th Mar, 2022. Pak Kong Garden, Sai Kung, HONG KONG 
-`,
-  },
-]
 
 const getWorkList = async () => {
   const list = fs
@@ -111,7 +58,16 @@ const getPerformanceList = async () => {
     })
   return list
 }
-const getHomeList = async () => homeList
 
-export type { Home }
+const getHomeList = async () => {
+  const homePageRaw = fs.readFileSync(
+    path.join(process.cwd(), 'public/cms/home.json'),
+    'utf8',
+  )
+
+  const homePage = JSON.parse(homePageRaw) as homeT
+  return homePage.works
+}
+
 export { getWorkList, getPerformanceList, getHomeList }
+export type { performanceT, workT, homeT }

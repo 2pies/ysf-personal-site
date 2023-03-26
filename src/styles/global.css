@@ -14,16 +14,4 @@
   h1 {
     @apply mb-8 text-3xl font-bold;
   }
-
-  .rich-md h2 {
-    @apply mb-2 mt-4 text-2xl font-bold;
-  }
-
-  .rich-md p {
-    @apply mb-2;
-  }
-
-  .rich-md img {
-    @apply mb-2;
-  }
 }
