@@ -16,7 +16,7 @@ collections:
             widget: list
             add_to_top: true
             summary: '{{fields.description}}'
-            field:
+            fields:
               - { label: Image, name: image, widget: image }
               - { label: Description, name: description, widget: text }
               - { label: url, name: url, widget: string }
