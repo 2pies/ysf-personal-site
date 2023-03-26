@@ -19,7 +19,7 @@ collections:
             fields:
               - { label: Image, name: image, widget: image }
               - { label: Description, name: description, widget: text }
-              - { label: url, name: url, widget: string }
+              - { label: url, name: url, widget: string, required: false }
       - label: About Page
         name: about
         file: 'public/cms/about.json'
