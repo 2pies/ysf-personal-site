@@ -52,7 +52,7 @@ const Header = ({ menuList, siteData }: LoaderData) => {
 
   return (
     <>
-      <header className="sticky max-w-full px-4 pt-4 pb-4 md:pb-6 md:pt-8">
+      <header className="sticky max-w-full px-8 pt-12 pb-4 md:pb-6 md:pt-8">
         <div className="flex w-main-w max-w-full items-end justify-between">
           <Link href="/" className="block text-lg font-bold">
             {siteData.siteName}

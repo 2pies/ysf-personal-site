@@ -21,10 +21,10 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
 
   return (
     <Layout {...props}>
-      <main className="h-full w-full">
+      <main className="container px-0">
         <Slider
-          sliderClass="h-full w-full"
-          itemClass="relative w-full min-w-full h-full"
+          sliderClass="w-full"
+          itemClass="relative w-full min-w-full aspect-video"
         >
           {props.workList.map((item) => {
             const content = isOpen

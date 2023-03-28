@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        "main-w": 1300,
+        "main-w": 1240,
       },
       spacing: {
         header: headerHeight,
-        "main-w": 1300,
+        "main-w": 1240,
         "main-h": `calc(100vh - ${headerHeight}px)`,
       },
       colors: {

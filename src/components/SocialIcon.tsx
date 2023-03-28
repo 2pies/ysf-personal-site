@@ -1,10 +1,12 @@
 interface Props {
-  color?: string;
-  className?: string;
+  color?: string
+  className?: string
 }
 
-const FacebookIcon = ({ color = "#fff", className }: Props) => (
+const FacebookIcon = ({ color = '#fff', className }: Props) => (
   <svg
+    height="100%"
+    width="100%"
     id="Elements_Icons_Facebook"
     data-name="Elements / Icons / Facebook"
     xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +20,12 @@ const FacebookIcon = ({ color = "#fff", className }: Props) => (
       fill={color}
     />
   </svg>
-);
+)
 
-const InstagramIcon = ({ color = "#fff", className }: Props) => (
+const InstagramIcon = ({ color = '#fff', className }: Props) => (
   <svg
+    height="100%"
+    width="100%"
     id="Elements_Icons_Instagram"
     data-name="Elements / Icons / Instagram"
     xmlns="http://www.w3.org/2000/svg"
@@ -35,10 +39,12 @@ const InstagramIcon = ({ color = "#fff", className }: Props) => (
       fill={color}
     />
   </svg>
-);
+)
 
-const YoutubeIcon = ({ color = "#fff", className }: Props) => (
+const YoutubeIcon = ({ color = '#fff', className }: Props) => (
   <svg
+    height="100%"
+    width="100%"
     id="Elements_Icons_Youtube"
     data-name="Elements / Icons / Youtube"
     xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +59,6 @@ const YoutubeIcon = ({ color = "#fff", className }: Props) => (
       fill={color}
     />
   </svg>
-);
+)
 
-export { FacebookIcon, InstagramIcon, YoutubeIcon };
+export { FacebookIcon, InstagramIcon, YoutubeIcon }
