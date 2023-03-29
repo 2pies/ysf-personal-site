@@ -24,7 +24,7 @@ export async function getMenuList() {
     { label: translations.menu_work, path: '/work' },
     { label: translations.menu_performance, path: '/performance' },
     { label: translations.menu_exhibition, path: '/exhibitions' },
-    { label: translations.menu_workshop, path: '/workshops' },
+    { label: translations.menu_workshop, path: '/workshop' },
     { label: translations.menu_press, path: '/press' },
     { label: translations.menu_about, path: '/about' },
     { label: translations.menu_contact, path: '/contact' },
