@@ -38,6 +38,20 @@ collections:
                 name: 'size'
                 widget: 'select'
                 options: ['square', 'long', 'super-long', 'tall']
+      - label: Press Page
+        name: press
+        file: 'public/cms/press.json'
+        extension: json
+        fields:
+          - { label: Banner, name: banner, widget: image }
+          - label: Press/News
+            name: news
+            widget: list
+            add_to_top: true
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: url, name: url, widget: string }
       - label: About Page
         name: about
         file: 'public/cms/about.json'

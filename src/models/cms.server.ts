@@ -33,6 +33,14 @@ type exhibitionT = {
   }>
 }
 
+type pressT = {
+  banner: string
+  news: Array<{
+    title: string
+    url: string
+  }>
+}
+
 const getWorkList = async () => {
   const list = fs
     .readdirSync(path.join(process.cwd(), 'public/cms/work'))
@@ -87,5 +95,21 @@ const getExhibitionList = async () => {
   return exhibitionPage
 }
 
-export { getWorkList, getPerformanceList, getHomeList, getExhibitionList }
+const getPressPage = async () => {
+  const pressPageRaw = fs.readFileSync(
+    path.join(process.cwd(), 'public/cms/press.json'),
+    'utf8',
+  )
+
+  const pressPage = JSON.parse(pressPageRaw) as pressT
+  return pressPage
+}
+
+export {
+  getWorkList,
+  getPerformanceList,
+  getHomeList,
+  getExhibitionList,
+  getPressPage,
+}
 export type { performanceT, workT, homeT, exhibitionT }

@@ -1,55 +1,37 @@
 import { getLayoutStaticProps, Layout } from '@/components/Layout'
+import { getPressPage } from '@/models/cms.server'
 import { staticPage } from '@/typeUtils'
 import Image from 'next/image'
-
-const ccc = 'https://picsum.photos/1920/'
 
 export async function getStaticProps() {
   return {
     props: {
       ...(await getLayoutStaticProps()),
+      cms: await getPressPage(),
     },
   }
 }
 
-const imageList = [
-  {
-    imageSrc: `${ccc}1081/`,
-    title: 'image1',
-    year: 2022,
-  },
-  {
-    imageSrc: `${ccc}1082/`,
-    title: 'image2',
-    year: 2022,
-  },
-  {
-    imageSrc: `${ccc}1083/`,
-    title: 'image3',
-    year: 2022,
-  },
-  {
-    imageSrc: `${ccc}1084/`,
-    title: 'image4',
-    year: 2022,
-  },
-]
-
 export default function Index(props: staticPage<typeof getStaticProps>) {
+  const { cms } = props
   return (
     <Layout {...props}>
-      <main>
-        <h1>Press</h1>
-        <div className="container grid grid-cols-3 gap-4">
-          {imageList.map((image) => (
-            <div
-              key={image.title}
-              className="group relative col-span-1 aspect-video"
-            >
-              <Image src={image.imageSrc} alt={image.title} fill />
-              <div className="absolute bottom-0 top-0 left-0 right-0 flex items-end bg-black bg-opacity-40 p-4 opacity-0 group-hover:opacity-100">
-                <span className="text-xs text-white">{`${image.title}(${image.year})`}</span>
-              </div>
+      <main className="container">
+        <div className="relative mb-8 aspect-video w-full">
+          <Image src={cms.banner} alt="" fill />
+        </div>
+        <div className="flex flex-col gap-y-8">
+          {cms.news.map((press) => (
+            <div key={press.title} className="flex flex-col gap-y-1">
+              <h2 className="font-bold">{press.title}</h2>
+              <a
+                href={press.url}
+                className="text-blue-400 underline hover:text-blue-700"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {press.url}
+              </a>
             </div>
           ))}
         </div>
