@@ -19,8 +19,8 @@ const Page = (props: staticPage<typeof getStaticProps>) => {
     <Layout {...props}>
       <main className="container">
         <div className="flex flex-col items-center justify-center">
-          <Image src={img_artistBio_l} alt="" className="max-w-xl" />
-          <p className="md:mt-12">{props.bio}</p>
+          <Image src={img_artistBio_l} alt="" className="max-w-[20rem]" />
+          <p className="md:mt-12 md:px-24">{props.bio}</p>
         </div>
       </main>
     </Layout>

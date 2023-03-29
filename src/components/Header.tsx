@@ -52,29 +52,32 @@ const Header = ({ menuList, siteData }: LoaderData) => {
 
   return (
     <>
-      <header className="sticky max-w-full px-8 pt-12 pb-4 md:pb-6 md:pt-8">
-        <div className="flex w-main-w max-w-full items-end justify-between">
-          <Link href="/" className="block text-lg font-bold">
-            {siteData.siteName}
-          </Link>
+      <header className="sticky z-40 max-w-full bg-white px-8 pt-10 pb-6 md:pb-6 md:pt-12">
+        <div className="flex w-main-w max-w-full flex-wrap items-center justify-end gap-y-4">
+          <div className="flex-1">
+            <Link href="/" className="whitespace-nowrap text-lg font-bold">
+              {siteData.siteName}
+            </Link>
+          </div>
           <div className="md:hidden">
             <Hamburger menuIsOpened={menuIsOpened} toggleMenu={toggleMenu} />
           </div>
-          <div className="hidden items-end md:flex">
+
+          <div className="hidden flex-wrap items-end justify-end gap-y-4 gap-x-6 md:flex">
             <nav>
               <ul className="mr-2 flex">
                 {menuList.map((menu) => {
                   const isActive =
                     menu.path === '/'
                       ? pathname === menu.path
-                      : pathname.startsWith(menu.path)
+                      : `${pathname}/`.startsWith(menu.path)
 
                   return (
                     <li key={menu.path}>
                       <Link
                         href={menu.path}
                         className={
-                          'mr-6 block hover:underline ' +
+                          'ml-6 block hover:underline ' +
                           (isActive ? 'text-black' : 'text-link-gray')
                         }
                       >
@@ -90,20 +93,26 @@ const Header = ({ menuList, siteData }: LoaderData) => {
         </div>
       </header>
       {menuIsOpened && (
-        <div className="z-50 flex h-full w-full flex-col bg-gray-100 md:hidden">
-          {menuList.map((menu) => (
-            <div
-              key={menu.path}
-              className="flex flex-col items-center"
-              onClick={() => setM(false)}
-            >
-              <Link href={menu.path} className="mt-8 block text-3xl font-bold">
-                {menu.label}
-              </Link>
+        <div className="relative max-h-0 w-full">
+          <div
+            className="fixed top-0 left-0 z-10 h-screen w-screen bg-white/20 backdrop-blur-3xl md:hidden"
+            onClick={() => setM(false)}
+          />
+          <div className="absolute left-0 top-0 z-50 flex w-screen flex-col md:hidden">
+            {menuList.map((menu) => (
+              <div
+                key={menu.path}
+                className="flex flex-col items-center"
+                onClick={() => setM(false)}
+              >
+                <Link href={menu.path} className="mt-8 block text-2xl">
+                  {menu.label}
+                </Link>
+              </div>
+            ))}
+            <div className="flex flex-1 items-end justify-center py-8">
+              <Social />
             </div>
-          ))}
-          <div className="flex flex-1 items-end justify-center pb-4">
-            <Social />
           </div>
         </div>
       )}

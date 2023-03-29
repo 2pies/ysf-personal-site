@@ -19,8 +19,8 @@ const Page = (props: staticPage<typeof getStaticProps>) => {
     <Layout {...props}>
       <main className="container">
         <div className="flex flex-col items-center justify-center">
-          <Image src={img_award_s} alt="" className="max-w-xl" />
-          <ul className="mb-8 flex flex-col gap-4 md:mt-12">
+          <Image src={img_award_s} alt="" className="max-w-[20rem]" />
+          <ul className="mb-8 flex flex-col gap-4 md:mt-12 md:px-24">
             {props.awards.map((exhibition, index) => (
               <li key={index}>- {exhibition}</li>
             ))}
