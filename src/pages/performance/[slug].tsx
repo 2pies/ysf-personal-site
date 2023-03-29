@@ -4,6 +4,8 @@ import { staticPage } from '@/typeUtils'
 import { type GetStaticPropsContext } from 'next'
 import { parseHtml } from '@/utils/html-parser'
 
+import { Breadcrumb } from '@/components/Breadcrumb'
+
 export async function getStaticPaths() {
   const workList = await getPerformanceList()
 
@@ -31,6 +33,11 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
   return (
     <Layout {...props}>
       <main className="container">
+        <Breadcrumb
+          prevLink="/performance/"
+          prevText="All Performances"
+          currentText={`${props.work.name} (${props.work.year})`}
+        />
         {parseHtml(props.work.detailsHtml)}
       </main>
     </Layout>

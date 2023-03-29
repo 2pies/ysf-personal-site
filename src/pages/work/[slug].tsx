@@ -3,6 +3,7 @@ import { getLayoutStaticProps, Layout } from '@/components/Layout'
 import { type GetStaticPropsContext } from 'next'
 import { staticPage } from '@/typeUtils'
 import { parseHtml } from '@/utils/html-parser'
+import { Breadcrumb } from '@/components/Breadcrumb'
 
 export async function getStaticPaths() {
   const workList = await getWorkList()
@@ -30,7 +31,15 @@ export const getStaticProps = async (props: GetStaticPropsContext) => {
 export default function Index(props: staticPage<typeof getStaticProps>) {
   return (
     <Layout {...props}>
-      <main className="container">{parseHtml(props.work.detailsHtml)}</main>
+      <main className="container">
+        <Breadcrumb
+          prevLink="/work/"
+          prevText="All Works"
+          currentText={`${props.work.name} (${props.work.year})`}
+        />
+
+        {parseHtml(props.work.detailsHtml)}
+      </main>
     </Layout>
   )
 }
