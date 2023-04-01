@@ -63,6 +63,7 @@ export const Slider = (props: propsT) => {
       <button
         className="absolute top-1/2 left-4 aspect-square rounded-full border border-black bg-white p-2 opacity-40 duration-200 hover:opacity-70"
         onClick={onPrev}
+        title="Previous"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -82,6 +83,7 @@ export const Slider = (props: propsT) => {
       <button
         className="absolute top-1/2 right-4 aspect-square rounded-full border border-black bg-white p-2 opacity-40 duration-200 hover:opacity-70"
         onClick={onNext}
+        title="Next"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
