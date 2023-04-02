@@ -39,7 +39,7 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
             </h1>
             <p className="text-center text-xl mix-blend-difference md:w-2/3 md:text-3xl">
               {`For all enquiries, exhibitions and collaborations, feel free to contact me via email at `}
-              <a href="mailto:nhgysf@gmail.com">nhgysf@gmail.com</a>
+              <a href="mailto:info@siufongyeung.com">info@siufongyeung.com</a>
             </p>
           </div>
         </div>
