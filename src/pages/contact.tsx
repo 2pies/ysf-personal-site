@@ -19,6 +19,7 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
             src="/images/uploads/work_2019_body_schema_motion_1.jpg"
             alt=""
             fill
+            priority
             className="object-cover"
           />
 
