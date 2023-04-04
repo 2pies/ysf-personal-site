@@ -17,51 +17,49 @@ export async function getStaticProps() {
 }
 
 export default function Index(props: staticPage<typeof getStaticProps>) {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
     <Layout {...props}>
-      <main className="container px-0">
+      <main className="container px-0 pt-12">
         <Slider
           sliderClass="w-full"
           itemClass="relative w-full min-w-full aspect-video"
         >
           {props.workList.map((item) => {
-            const content = isOpen
-              ? item.description
-              : item.description.split('\n')[0]
-            return (
-              <div
-                key={item.description}
-                className="aspect-video h-main-h w-full max-w-full"
-              >
+            const content = item.description
+
+            const main = (
+              <div>
                 <Image
-                  className="h-main-h w-full min-w-full object-cover transition-all"
+                  className="h-main-h w-full min-w-full object-contain transition-all"
                   src={item.image}
                   alt=""
                   priority
                   fill
                 />
 
-                <div className="absolute right-0 bottom-10 flex max-w-[70%] flex-col bg-white p-4 transition-all duration-300">
+                <div className="absolute right-0 bottom-10 flex max-w-[70%] flex-col rounded-tl rounded-bl bg-white/30 p-4 transition-all duration-300">
                   <p className="mb-2 whitespace-pre-line text-lg">{content}</p>
-                  <div className="flex justify-end">
-                    {item.url && (
-                      <Link
-                        className=" mt-4 mr-4 text-right text-sm text-text-gray underline hover:text-blue-400"
-                        href={item.url}
-                      >
-                        View Project
-                      </Link>
-                    )}
-                    <button
-                      className=" mt-4 text-right text-sm text-text-gray underline hover:text-blue-400"
-                      onClick={() => setIsOpen(!isOpen)}
-                    >
-                      {isOpen ? 'Collapse' : 'Expand'}
-                    </button>
-                  </div>
                 </div>
+              </div>
+            )
+
+            if (item.url)
+              return (
+                <Link
+                  key={item.description}
+                  className="aspect-video w-full max-w-full"
+                  href={item.url}
+                >
+                  {main}
+                </Link>
+              )
+
+            return (
+              <div
+                key={item.description}
+                className="aspect-video w-full max-w-full"
+              >
+                {main}
               </div>
             )
           })}

@@ -68,7 +68,13 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
   return (
     <Layout {...props}>
       <main className="container">
-        <div className="mt-4 grid grid-cols-3 gap-x-4">
+        <div
+          className={cn(
+            'grid grid-cols-3 gap-x-4 transition-all duration-300',
+            isIdle ? 'mt-32' : 'mt-4',
+            // isIdle ? '-translate-y-1/2' : '-translate-y-full',
+          )}
+        >
           {[image1, image2, image3].map((image, index) => {
             const isSelected = index === selectedIndex
             return (

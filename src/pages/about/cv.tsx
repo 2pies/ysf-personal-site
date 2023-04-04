@@ -16,11 +16,11 @@ export async function getStaticProps() {
 const Page = (props: staticPage<typeof getStaticProps>) => {
   return (
     <Layout {...props}>
-      <main>
+      <main className="container">
         <Image src={img_cv_l} alt="" className="mb-8" />
         <div className="container grid gap-8 md:grid-cols-2">
           <div>
-            <h2 className="mb-2 text-xl font-bold">EXHIBITION</h2>
+            <h2 className="mb-2 text-xl font-bold underline">EXHIBITION</h2>
             <ul className="mb-8">
               {props.exhibitions.map((exhibition, index) => (
                 <li key={index}>- {exhibition}</li>
@@ -28,7 +28,7 @@ const Page = (props: staticPage<typeof getStaticProps>) => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-2 text-xl font-bold">PERFORMANCE</h2>
+            <h2 className="mb-2 text-xl font-bold underline">PERFORMANCE</h2>
             <ul className="">
               {props.performances.map((performance, index) => (
                 <li key={index}>- {performance}</li>

@@ -20,17 +20,16 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
         <div className="relative mb-8 aspect-video w-full">
           <Image src={cms.banner} alt="" fill />
         </div>
-        <div className="flex flex-col gap-y-8">
+        <div className="flex flex-col gap-y-4">
           {cms.news.map((press) => (
             <div key={press.title} className="flex flex-col gap-y-1">
-              <h2 className="font-bold">{press.title}</h2>
               <a
                 href={press.url}
-                className="text-blue-400 underline hover:text-blue-700"
+                className="text-gray-700 underline hover:text-blue-700"
                 target="_blank"
                 rel="noreferrer"
               >
-                {press.url}
+                <h2 className="font-bold">{press.title}</h2>
               </a>
             </div>
           ))}

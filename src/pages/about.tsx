@@ -37,7 +37,7 @@ export async function getStaticProps() {
 export default function Index(props: staticPage<typeof getStaticProps>) {
   return (
     <Layout {...props}>
-      <main className="container flex min-h-full flex-col items-center justify-between md:flex-row">
+      <main className="container flex min-h-full flex-col items-center justify-between md:flex-row md:pt-20">
         {imageList.map((image, index) => (
           <div
             key={image.title}

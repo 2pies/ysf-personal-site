@@ -14,7 +14,7 @@ export function Layout(props: propsT) {
     <div className="flex h-full max-h-screen min-h-screen flex-col items-center bg-white">
       <Header menuList={menuList} siteData={siteData} />
       {props.children}
-      <footer>
+      <footer className="pb-3 pt-1">
         <span className="text-xs">
           {siteData.copyRight.replace('{year}', new Date().getFullYear() + '')}
         </span>

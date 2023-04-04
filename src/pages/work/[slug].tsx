@@ -31,15 +31,7 @@ export const getStaticProps = async (props: GetStaticPropsContext) => {
 export default function Index(props: staticPage<typeof getStaticProps>) {
   return (
     <Layout {...props}>
-      <main className="container">
-        <Breadcrumb
-          prevLink="/work/"
-          prevText="All Works"
-          currentText={`${props.work.name} (${props.work.year})`}
-        />
-
-        {parseHtml(props.work.detailsHtml)}
-      </main>
+      <main className="container">{parseHtml(props.work.detailsHtml)}</main>
     </Layout>
   )
 }
