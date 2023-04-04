@@ -89,6 +89,19 @@ collections:
       - { label: 'Name', name: 'name', widget: 'string' } # preview display
       - { label: 'Year', name: 'year', widget: 'string' } # preview display
       - { label: 'Preview', name: 'preview', widget: 'image' } # listing page image
+      - label: 'Preview Size'
+        name: 'previewSize'
+        widget: 'select'
+        options:
+          [
+            '3-square',
+            '3-long',
+            '3-tall',
+            'big-big',
+            'big-square',
+            'long-small',
+            'long-big',
+          ]
       - {
           # details page content
           label: 'DetailsHtml',
@@ -109,6 +122,19 @@ collections:
       - { label: 'Name', name: 'name', widget: 'string' } # preview display
       - { label: 'Year', name: 'year', widget: 'string' } # preview display
       - { label: 'Preview', name: 'preview', widget: 'image' } # listing page image
+      - label: 'Preview Size'
+        name: 'previewSize'
+        widget: 'select'
+        options:
+          [
+            '3-square',
+            '3-long',
+            '3-tall',
+            'big-big',
+            'big-square',
+            'long-small',
+            'long-big',
+          ]
       - {
           # details page content
           label: 'DetailsHtml',
