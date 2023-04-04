@@ -1,11 +1,21 @@
 import path from 'path'
 import fs from 'fs'
 
+export type previewSizeU =
+  | '3-square'
+  | '3-long'
+  | '3-tall'
+  | 'big-big'
+  | 'big-square'
+  | 'long-small'
+  | 'long-big'
+
 type performanceT = {
   slug: string
   name: string
   year: number
   preview: string
+  previewSize: previewSizeU
   detailsHtml: string
 }
 
@@ -14,6 +24,7 @@ type workT = {
   name: string
   year: number
   preview: string
+  previewSize: previewSizeU
   detailsHtml: string
 }
 

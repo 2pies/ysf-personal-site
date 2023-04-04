@@ -22,6 +22,7 @@ export default function Index(props: staticPage<typeof getStaticProps>) {
             title: `${v.name} (${v.year})`,
             slug: `/work/${v.slug}`,
             imageSrc: v.preview,
+            size: v.previewSize,
           }))}
         />
       </main>
