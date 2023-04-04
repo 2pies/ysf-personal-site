@@ -17,7 +17,7 @@ const notoSanaHK = Noto_Sans_HK({
 })
 
 const config = {
-  metaTitle: 'Yeung Siu Fong - Art world',
+  metaTitle: 'Siu Fong Yeung',
   metaDescription: `Yeung Siu Fong (楊小芳) graduated from RMIT University Bachelor of Arts (Fine Art). Yeung's creative works attempt to recognize the "body" see the as an object from different perspectives and observations, she explores relationships between the soul and the physique with her "body" and expresses it via various media. Her recent series comprises paintings, ceramics, video, sound, and installation. Apart from participating in artistic creation, Yeung is also a performance artist.`,
 }
 
