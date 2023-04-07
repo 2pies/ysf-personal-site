@@ -61,7 +61,7 @@ export const Slider = (props: propsT) => {
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-4 aspect-square rounded-full border border-black bg-white p-2 opacity-40 duration-200 hover:opacity-70"
+        className="absolute left-4 top-1/2 aspect-square rounded-full border border-black bg-white p-2 opacity-40 duration-200 hover:opacity-70"
         onClick={onPrev}
         title="Previous"
       >
@@ -81,7 +81,7 @@ export const Slider = (props: propsT) => {
         </svg>
       </button>
       <button
-        className="absolute top-1/2 right-4 aspect-square rounded-full border border-black bg-white p-2 opacity-40 duration-200 hover:opacity-70"
+        className="absolute right-4 top-1/2 aspect-square rounded-full border border-black bg-white p-2 opacity-40 duration-200 hover:opacity-70"
         onClick={onNext}
         title="Next"
       >
