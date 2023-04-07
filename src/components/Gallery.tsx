@@ -15,8 +15,13 @@ const sizeConfig = {
   '3-square': 'aspect-[1/1] col-span-4 row-span-1',
   '3-long': 'aspect-[4/3] col-span-4 row-span-1',
   '3-tall': 'aspect-[9/16] col-span-4 row-span-1',
+
   'big-big': 'col-span-9 row-span-2',
   'big-square': 'aspect-[1/1] col-span-3 row-span-1',
+
+  'big-tall-big': 'col-span-7 row-span-2',
+  'big-tall-square': 'aspect-[1/1] col-span-5 row-span-1',
+
   'long-small': 'aspect-[1.2] col-span-4 row-span-1',
   'long-big': 'col-span-8 row-span-1',
 }

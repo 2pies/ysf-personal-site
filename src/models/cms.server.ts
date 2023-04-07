@@ -7,6 +7,8 @@ export type previewSizeU =
   | '3-tall'
   | 'big-big'
   | 'big-square'
+  | 'big-tall-big'
+  | 'big-tall-square'
   | 'long-small'
   | 'long-big'
 
